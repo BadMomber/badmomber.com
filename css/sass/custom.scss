@@ -35,14 +35,16 @@ $primary-transparent-80: #bd4b48cc;
 /* Keyframes
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-@keyframes movey {
+@keyframes move-y {
   0% {
     color: $white-dark;
     opacity: 0.1;
   }
+
   50% {
     opacity: 1;
   }
+
   100% {
     color: $primary;
     opacity: 0.1;
@@ -53,6 +55,7 @@ $primary-transparent-80: #bd4b48cc;
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -63,6 +66,7 @@ $primary-transparent-80: #bd4b48cc;
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -73,8 +77,21 @@ $primary-transparent-80: #bd4b48cc;
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    left: 20%;
+  }
+
+  100% {
+    opacity: 1;
+    left: 0;
   }
 }
 
@@ -83,6 +100,7 @@ $primary-transparent-80: #bd4b48cc;
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -93,6 +111,7 @@ $primary-transparent-80: #bd4b48cc;
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -107,6 +126,7 @@ body,
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 body {
   font-size: 1.6rem;
   font-weight: 200;
@@ -114,6 +134,7 @@ body {
   color: #d3cbbd;
   background-color: $black;
 }
+
 h1,
 h2,
 h3,
@@ -131,18 +152,23 @@ h6 {
 h1 {
   margin-top: 4rem;
 }
+
 h2 {
   margin-top: 3.5rem;
 }
+
 h3 {
   margin-top: 3rem;
 }
+
 h4 {
   margin-top: 2.5rem;
 }
+
 h5 {
   margin-top: 2rem;
 }
+
 h6 {
   margin-top: 1.5rem;
 }
@@ -156,11 +182,14 @@ p {
 }
 
 a {
-  color: $white-dark;
-  transition: 1s;
+  color: $secondary;
+  transition: .4s;
 
   &:hover {
     color: $secondary;
+    transition: .2s;
+    text-decoration: none;
+    border-bottom: 2px solid $secondary;
   }
 }
 
@@ -203,6 +232,7 @@ td {
   h2 {
     margin-bottom: 3.5rem;
   }
+
   .client {
     color: $white-dark;
     padding: 4rem 2rem;
@@ -213,7 +243,9 @@ td {
     &:hover {
       text-decoration: none;
       transition: 0.4s;
-      transform: scale(1.05);
+      transform: scale(1.2);
+      color: $primary;
+      border-bottom: none;
     }
 
     span {
@@ -239,6 +271,7 @@ td {
     box-shadow: none;
   }
 }
+
 textarea.form-control {
   height: 200px;
 }
@@ -246,11 +279,13 @@ textarea.form-control {
 button {
   margin: 2rem auto;
 }
+
 /* About
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .pure-button {
   text-align: center;
 }
+
 .fuller-button {
   width: 100%;
   color: $primary;
@@ -278,6 +313,7 @@ button {
       0 0 1.2em $primary-transparent-50;
   }
 }
+
 /* About
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .about {
@@ -342,30 +378,17 @@ button {
 
   #scroll-down {
     position: absolute;
-    bottom: 5%;
+    bottom: 10%;
     left: 50%;
     transform: translateX(-50%);
     z-index: 999;
+    opacity: 0;
 
-    animation-name: movey;
-    animation-duration: 2s;
+    animation-name: move-y;
+    animation-duration: 4s;
     animation-iteration-count: infinite;
 
-    &::after {
-      content: "";
-      width: 40px;
-      height: 40px;
-      position: absolute;
-      left: -20px;
-      text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-      @include transform(rotate(-90deg));
-      color: #fff;
-      font-size: 40px !important;
-      font-style: normal;
-      z-index: 9999;
-    }
-
-    &:hover:after {
+    &:hover {
       cursor: pointer;
       color: $primary;
     }
@@ -405,53 +428,12 @@ button {
   }
 }
 
-@media (max-width: 767px) {
-  h1,
-  .banner h1 {
-    font-size: 3rem;
-
-    span {
-      font-size: 1.2rem;
-    }
-  }
-  h2 {
-    font-size: 2rem;
-  }
-  p {
-    font-size: 1rem;
-  }
-
-  table,
-  tbody,
-  tr,
-  td {
-    font-size: 1rem;
-  }
-
-  .container,
-  .container-fluid {
-    padding: 2rem 2rem;
-  }
-
-  .fuller-button {
-    padding: 1.2rem 2rem;
-  }
-
-  .client {
-    margin-top: 2rem;
-
-    &:first-child {
-      margin-top: 0;
-    }
-  }
-}
-
 /* Navigation
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .button_container {
   position: fixed;
-  top: 5%;
-  right: 2%;
+  top: 4%;
+  right: 4%;
   height: 1.8rem;
   width: 2rem;
   cursor: pointer;
@@ -468,6 +450,7 @@ button {
       transform: translateY(11px) translateX(0) rotate(45deg);
       background: $secondary;
     }
+
     .middle {
       opacity: 0;
       background: $secondary;
@@ -502,14 +485,14 @@ button {
 
 .overlay {
   position: fixed;
-  background: $primary;
+  background: $black;
   top: 0;
   left: 0;
   width: 100%;
-  height: 0%;
+  height: 100%;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.35s, visibility 0.35s, height 0.35s;
+  transition: opacity 0.5s, visibility 0.5s, height 0.5s;
   overflow: hidden;
   z-index: 3000;
 
@@ -517,6 +500,7 @@ button {
     opacity: 1;
     visibility: visible;
     height: 100%;
+    width: 100%;
 
     li {
       animation: fadeInRight 0.5s ease forwards;
@@ -525,24 +509,27 @@ button {
       &:nth-of-type(2) {
         animation-delay: 0.4s;
       }
+
       &:nth-of-type(3) {
         animation-delay: 0.45s;
       }
+
       &:nth-of-type(4) {
         animation-delay: 0.5s;
       }
     }
   }
+
   nav {
     position: relative;
     height: 70%;
     top: 50%;
     transform: translateY(-50%);
     font-size: 50px;
-    font-family: "Vollkorn", serif;
     font-weight: 400;
     text-align: center;
   }
+
   ul {
     list-style: none;
     padding: 0;
@@ -554,7 +541,7 @@ button {
     li {
       display: block;
       height: 25%;
-      height: calc(100% / 4);
+      height: calc(100% / 6);
       min-height: 50px;
       position: relative;
       opacity: 0;
@@ -562,14 +549,20 @@ button {
       a {
         display: block;
         position: relative;
-        color: $warning;
+        color: $primary;
         text-decoration: none;
         overflow: hidden;
+
+        &:hover {
+          text-decoration: none;
+          border-bottom: none;
+        }
 
         &:hover:after,
         &:focus:after,
         &:active:after {
           width: 100%;
+          border-bottom: none;
         }
 
         &:after {
@@ -580,7 +573,7 @@ button {
           width: 0%;
           transform: translateX(-50%);
           height: 3px;
-          background: $warning;
+          background: $primary;
           transition: 0.35s;
         }
       }
@@ -588,13 +581,111 @@ button {
   }
 }
 
-@keyframes fadeInRight {
-  0% {
-    opacity: 0;
-    left: 20%;
+@media (max-width: 768px) {
+
+  h1,
+  .banner h1 {
+    font-size: 3rem;
+
+    span {
+      font-size: 1.2rem;
+    }
   }
-  100% {
-    opacity: 1;
-    left: 0;
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+
+  table,
+  tbody,
+  tr,
+  td {
+    font-size: 1.2rem;
+  }
+
+  .container,
+  .container-fluid {
+    padding: 2rem 2rem;
+  }
+
+  .fuller-button {
+    padding: 1.2rem 2rem;
+  }
+
+  .client {
+    margin-top: 2rem;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  .overlay {
+    nav {
+      font-size: 2.6rem;
+    }
+  }
+}
+
+@media (max-width: 420px) {
+
+  h1,
+  .banner h1 {
+    font-size: 3rem;
+
+    span {
+      font-size: 1.2rem;
+    }
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+
+  table,
+  tbody,
+  tr,
+  td {
+    font-size: 1.2rem;
+  }
+
+  td {
+    display: block;
+    width: 100%;
+
+    &:first-child {
+      border-bottom: 1px solid $white;
+    }
+  }
+
+  .container,
+  .container-fluid {
+    padding: 2rem 2rem;
+  }
+
+  .fuller-button {
+    padding: 1.2rem 2rem;
+  }
+
+  .client {
+    margin-top: 2rem;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  .overlay {
+    nav {
+      font-size: 2rem;
+    }
   }
 }
