@@ -218,7 +218,11 @@ $(document).ready(function () {
 			800, 'linear');
 	});
 
-	// Clients styling & JS effects
+	// Navigation animation
+	$('#toggle').click(function () {
+		$(this).toggleClass('active');
+		$('#overlay').toggleClass('open');
+	});
 
 	init();
 

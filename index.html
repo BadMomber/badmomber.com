@@ -27,7 +27,7 @@
 
   <!-- jQuery
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
   <script src="js/enllax/jquery.enllax.min.js"></script>
 
   <!-- JavaScript
@@ -62,16 +62,23 @@
     <div><span id="scroll-down"><i class="fas fa-chevron-down fa-sm"></i></span></div>
   </div>
 
-  <nav class="navbar" id="navigation">
-    <ul class="navbar-list">
-      <li class="navbar-item"><a class="navbar-link" href="#home">Home</a></li>
-      <li class="navbar-item"><a class="navbar-link" href="#kersten">Personal</a></li>
-      <li class="navbar-item"><a class="navbar-link" href="#clients">Clients</a></li>
-      <li class="navbar-item"><a class="navbar-link" href="#skills">About &
-          Skills</a></li>
-      <li class="navbar-item"><a class="navbar-link" href="#footer">Contact</a></li>
-    </ul>
-  </nav>
+  <div class="button_container navbar" id="toggle">
+    <span class="top"></span>
+    <span class="middle"></span>
+    <span class="bottom"></span>
+  </div>
+
+  <div class="overlay" id="overlay">
+    <nav class="overlay-menu">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Personal</a></li>
+        <li><a href="#">Clients</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
 
 
   <!-- Primary Page Layout

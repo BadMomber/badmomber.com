@@ -20,11 +20,14 @@ $white: #fff;
 $white-dark: $one;
 $black: #000;
 $grey: #403d3c;
-$blue: #456f74;
 // $primary: #80b9e6;
 // $primary: $five;
 
-$primary: $five;
+$primary: $three;
+$secondary: #585a80;
+$warning: #dfde61;
+$error: #ac2538;
+$success: #35a468;
 
 $primary-transparent-50: #bd4b4880;
 $primary-transparent-40: #bd4b4866;
@@ -34,18 +37,15 @@ $primary-transparent-80: #bd4b48cc;
 
 @keyframes movey {
   0% {
-    transform: translateY(-100%);
     color: $white-dark;
-    opacity: 0;
+    opacity: 0.1;
   }
   50% {
-    transform: translateY(-50%);
     opacity: 1;
   }
   100% {
-    transform: translateY(0%);
     color: $primary;
-    opacity: 0;
+    opacity: 0.1;
   }
 }
 
@@ -160,7 +160,7 @@ a {
   transition: 1s;
 
   &:hover {
-    color: $blue;
+    color: $secondary;
   }
 }
 
@@ -315,7 +315,7 @@ button {
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.9);
   }
 
   h1 {
@@ -380,38 +380,6 @@ button {
   margin-bottom: 2rem;
 }
 
-.navbar {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 2000;
-  padding: 2rem 0 1rem 0;
-  font-size: 1.1rem;
-  font-weight: 300;
-  //background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8));
-  background-color: $black;
-
-  .navbar-list {
-    width: 90%;
-    margin: 0 auto;
-    padding: 0;
-    display: flex;
-    justify-content: space-around;
-    li {
-      list-style-type: none;
-    }
-  }
-}
-
-/*
-#navigation {
-  -webkit-box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.75);
-}
-*/
-
 #about {
   -webkit-box-shadow: 0px -20px 20px 15px rgba(0, 0, 0, 1);
   -moz-box-shadow: 0px -20px 20px 15px rgba(0, 0, 0, 1);
@@ -465,10 +433,6 @@ button {
     padding: 2rem 2rem;
   }
 
-  #navigation {
-    display: none;
-  }
-
   .fuller-button {
     padding: 1.2rem 2rem;
   }
@@ -479,5 +443,158 @@ button {
     &:first-child {
       margin-top: 0;
     }
+  }
+}
+
+/* Navigation
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.button_container {
+  position: fixed;
+  top: 5%;
+  right: 2%;
+  height: 1.8rem;
+  width: 2rem;
+  cursor: pointer;
+  z-index: 100;
+  transition: opacity 0.25s ease;
+  z-index: 4000;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &.active {
+    .top {
+      transform: translateY(11px) translateX(0) rotate(45deg);
+      background: $secondary;
+    }
+    .middle {
+      opacity: 0;
+      background: $secondary;
+    }
+
+    .bottom {
+      transform: translateY(-11px) translateX(0) rotate(-45deg);
+      background: $secondary;
+    }
+  }
+
+  span {
+    background: $primary;
+    border: none;
+    height: 5px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.35s ease;
+    cursor: pointer;
+
+    &:nth-of-type(2) {
+      top: 11px;
+    }
+
+    &:nth-of-type(3) {
+      top: 22px;
+    }
+  }
+}
+
+.overlay {
+  position: fixed;
+  background: $primary;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.35s, visibility 0.35s, height 0.35s;
+  overflow: hidden;
+  z-index: 3000;
+
+  &.open {
+    opacity: 1;
+    visibility: visible;
+    height: 100%;
+
+    li {
+      animation: fadeInRight 0.5s ease forwards;
+      animation-delay: 0.35s;
+
+      &:nth-of-type(2) {
+        animation-delay: 0.4s;
+      }
+      &:nth-of-type(3) {
+        animation-delay: 0.45s;
+      }
+      &:nth-of-type(4) {
+        animation-delay: 0.5s;
+      }
+    }
+  }
+  nav {
+    position: relative;
+    height: 70%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 50px;
+    font-family: "Vollkorn", serif;
+    font-weight: 400;
+    text-align: center;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: inline-block;
+    position: relative;
+    height: 100%;
+
+    li {
+      display: block;
+      height: 25%;
+      height: calc(100% / 4);
+      min-height: 50px;
+      position: relative;
+      opacity: 0;
+
+      a {
+        display: block;
+        position: relative;
+        color: $warning;
+        text-decoration: none;
+        overflow: hidden;
+
+        &:hover:after,
+        &:focus:after,
+        &:active:after {
+          width: 100%;
+        }
+
+        &:after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          width: 0%;
+          transform: translateX(-50%);
+          height: 3px;
+          background: $warning;
+          transition: 0.35s;
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    left: 20%;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
   }
 }
