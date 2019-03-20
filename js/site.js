@@ -295,6 +295,15 @@ $(document)
           .toggleClass('open');
       });
 
+    var frmvalidator = new Validator("contactform");
+    frmvalidator.addValidation("firstname", "req",
+      "Please provide your first name");
+    frmvalidator.addValidation("lastname", "req", "Please provide your last name");
+    frmvalidator.addValidation("email", "req", "Please provide your email");
+    frmvalidator.addValidation("email", "email",
+      "Please enter a valid email address");
+    frmvalidator.addValidation("message", "Please provide a message");
+
     init();
 
   });
