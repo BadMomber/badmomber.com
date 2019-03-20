@@ -1,37 +1,9 @@
 @import "bootstrap/bootstrap-reboot.min.css";
 @import "bootstrap/bootstrap-grid.min.css";
 @import "bootstrap/bootstrap.min.css";
+@import "partials/colors";
 @import "compass/css3";
 
-/** COLORS **/
-
-$one: #fcfbfa;
-$two: #c33950;
-$three: #f55d08;
-$four: #80b9e6;
-$five: #207ae1;
-$yellow: #f1b34c;
-$ultraviolet: #221a55;
-$dark-red: #ae392e;
-$red: #e8352e;
-$green: #35c170;
-
-$white: #fff;
-$white-dark: $one;
-$black: #000;
-$grey: #403d3c;
-// $primary: #80b9e6;
-// $primary: $five;
-
-$primary: $three;
-$secondary: #585a80;
-$warning: #dfde61;
-$error: #ac2538;
-$success: #35a468;
-
-$primary-transparent-50: #bd4b4880;
-$primary-transparent-40: #bd4b4866;
-$primary-transparent-80: #bd4b48cc;
 /* Keyframes
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
@@ -235,16 +207,17 @@ td {
 
   .client {
     color: $white-dark;
-    padding: 4rem 2rem;
+    padding: 5rem 2rem;
     text-align: center;
     transition: 0.4s;
     background-color: darken($grey, 15%);
+    border-radius: 2rem;
 
     &:hover {
       text-decoration: none;
       transition: 0.4s;
       transform: scale(1.2);
-      color: $primary;
+      color: $secondary;
       border-bottom: none;
     }
 
@@ -253,6 +226,24 @@ td {
       text-decoration: none;
       line-height: 1;
     }
+  }
+
+  #github {
+    span:after {
+      content: "";
+      height: 2rem;
+      width: 2rem;
+      display: inline-block;
+      background-image: url("../images/logos/github-logo-cat.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+      margin-left: 1rem;
+    }
+  }
+
+  #empty {
+    opacity: 0;
   }
 }
 
@@ -282,11 +273,11 @@ button {
 
 /* About
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.pure-button {
+.pure-button-primary {
   text-align: center;
 }
 
-.fuller-button {
+.fuller-button-primary {
   width: 100%;
   color: $primary;
   background: none;
@@ -300,13 +291,13 @@ button {
     cursor: pointer;
   }
 
-  &.white {
+  &.primary {
     box-shadow: inset 0 0 0.8em $primary-transparent-50,
       0 0 0.8em $primary-transparent-50;
     border: $primary solid 2px;
   }
 
-  &.white:hover {
+  &.primary:hover {
     color: $white-dark;
     background-color: $primary;
     box-shadow: inset 0 0 0 $primary-transparent-50,
@@ -351,7 +342,7 @@ button {
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.85);
   }
 
   h1 {
@@ -581,7 +572,26 @@ button {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 991px) {
+
+  #clients {
+    .client {
+
+      padding: 4rem .6rem;
+
+      span {
+        font-size: 1.4rem;
+      }
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 767px) {
 
   h1,
   .banner h1 {
@@ -688,4 +698,9 @@ button {
       font-size: 2rem;
     }
   }
+}
+
+
+.border-primary {
+  border-color: $primary !important;
 }

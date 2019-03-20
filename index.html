@@ -33,12 +33,9 @@
 
   <!-- JavaScript
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <script async
-    src="https://www.googletagmanager.com/gtag/js?id=UA-136624659-1"></script>
-  <script language="javascript" type="text/javascript"
-    src="js/cookieconsent.js"></script>
-  <script language="javascript" type="text/javascript"
-    src="js/bootstrap/bootstrap.min.js"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136624659-1"></script>
+  <script language="javascript" type="text/javascript" src="js/cookieconsent.js"></script>
+  <script language="javascript" type="text/javascript" src="js/bootstrap/bootstrap.min.js"></script>
   <script language="javascript" type="text/javascript" src="js/site.js">
   </script>
 
@@ -50,16 +47,14 @@
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="images/favicon.png">
-  <link rel="stylesheet"
-    href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
 
 <body>
   <!-- Menu
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div data-enllax-ratio="1" class="banner parallax-container" id="home intro">
+  <div data-enllax-ratio="1" class="banner parallax-container" id="home">
     <div class="banner-overlay"></div>
     <div data-enllax-ratio=".8" class="banner">
       <h1>Kersten Kriegbaum <br><span>Digital Consultant, SEO & Software
@@ -81,7 +76,7 @@
         <li><a class="toggle" href="#home">Home</a></li>
         <li><a class="toggle" href="#about">Hello</a></li>
         <li><a class="toggle" href="#personal">Personal</a></li>
-        <li><a class="toggle" href="#clients">Clients</a></li>
+        <li><a class="toggle" href="#clients">Clients & Projects</a></li>
         <li><a class="toggle" href="#skills">Skills</a></li>
         <li><a class="toggle" href="#contact">Contact</a></li>
       </ul>
@@ -94,25 +89,36 @@
 
   <div class="container-fluid" id="about">
     <div class="row justify-content-center">
-      <div class="col col-xl-6 col-lg-6 col-md-8 col-sm-12">
+      <div class="col-xl-6 col-lg-6 col-md-8 col-sm-12">
         <h2>Hi there.</h2>
-        <p>I'm Kersten.
-          <br /> I live in the digital city of Darmstadt and work as a
-          consultant
-          and developer with over 4 years commercial
-          <a href="#skills">experience</a>.
-          <br>I work as a freelancer and spin-off partner to different
-          companies
-          and agencies.
-          <br /> I advise my <a href="#clients">clients</a> solely for their
-          own
-          benefit and always consider all options.</p>
+        <p><strong>I'm Kersten.</strong></p>
+        <p>I live in the digital city of Darmstadt and work as a consultant and
+          developer with over 4 years of professional
+          <a href="#skills">experience</a>.</p>
+        <p>I work as a freelancer and spin-off partner for various companies and
+          agencies.</p>
+        <p>I advise my <a href="#clients">clients</a> exclusively for their own
+          benefit and always
+          consider all options.</p>
+        <p>I love to use my knowledge and experience for new projects - but the
+          real attraction for me is to always learn new things and to face the
+          individual challenges of each new project.</p>
+        <p>My focus is clearly on web development, the rapidly evolving
+          technology in this area demands everything from developers, who stops,
+          quickly loses the connection. I have specialized in NodeJS and its
+          ecosystem, I have recently found great favor with VueJS and Nuxt.</p>
+        <p>Nevertheless (or just because of that?) I always look beyond the end
+          of
+          my nose, keep an eye on new technologies and try to take a holistic
+          approach to projects, to think along with everything that could have
+          an
+          influence on the result.</p>
       </div>
     </div>
   </div>
   <div class="container" id="personal">
     <div class="row justify-content-center">
-      <div class="col col-xl-8 col-lg-8 col-md-10 col-sm-12">
+      <div class="col-xl-8 col-lg-8 col-md-10 col-sm-12">
         <h2>About my person</h2>
         <table>
           <tbody>
@@ -145,74 +151,138 @@
 
   <div class="container-fluid" id="clients">
     <div class="row justify-content-around">
-      <div class="col col-xl-8 col-lg-8 col-md-12 col-sm-12">
-        <h2>Clients</h2>
+      <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12">
+        <h2>Clients & Projects</h2>
       </div>
     </div>
 
     <div class="row justify-content-around">
-      <a id="psmw" href="https://www.psmw.de" target="_blank" class="col-xl-2 col-lg-2 col-md-8 col-sm-8 client">
+      <a id="psmw" href="https://www.psmw.de" target="_blank" class="col-xl-3 col-lg-3 col-md-3 col-sm-8 client">
         <span>PSM&W
           Kommunikation</span>
         <!--<img class="kundenlogo" id="logo-psmw" src="images/logo-psmw.jpg" />-->
       </a>
       <a id="heimatstore" href="https://heimatstore.com" target="_blank"
-        class="col-xl-2 col-lg-2 col-md-8 col-sm-8 client">
+        class="col-xl-3 col-lg-3 col-md-3 col-sm-8 client">
         <span>Heimatstore</a>
       <!--<img class="kundenlogo" id="logo-heimatstore" src="images/logo-heimatstore.jpg" />-->
       </a>
-      <a id="hgc" href="http://herrngarten.cafe" target="_blank" class="col-xl-2 col-lg-2 col-md-8 col-sm-8 client">
+      <a id="hgc" href="http://herrngarten.cafe" target="_blank" class="col-xl-3 col-lg-3 col-md-3 col-sm-8 client">
         <span>Herrngartencafe</span>
         <!--<img class="kundenlogo" id="logo-herrngarten" src="images/logo-herrngarten-cafe.jpg"
             />-->
       </a>
+    </div>
+
+    <div class="row justify-content-around">
       <a id="bonapart" href="http://www.bon-apart.de/" target="_blank"
-        class="col-xl-2 col-lg-2 col-md-8 col-sm-8 client">
+        class="col-xl-3 col-lg-3 col-md-3 col-sm-8 client">
         <span>Hotel
           Bon Apart</span>
         <!--<img class="kundenlogo" id="logo-bon-apart" src="images/logo-hotel-bon-apart.jpg"
             />-->
       </a>
-    </div>
-
-    <div class="row justify-content-around">
-
       <a id="murk" href="http://www.bestattungen-murk.de/einladung.html" target="_blank"
-        class="col-xl-2 col-lg-2 col-md-8 col-sm-8 client">
+        class="col-xl-3 col-lg-3 col-md-3 col-sm-8 client">
         <span>Murk Bestattungen</span>
         <!--<img class="kundenlogo" id="logo-murk" src="images/logo-murk-bestattungen.jpg" />-->
       </a>
       <a id="gehrig" href="https://www.waltraud-gehrig.com/" target="_blank"
-        class="col-xl-2 col-lg-2 col-md-8 col-sm-8 client">
+        class="col-xl-3 col-lg-3 col-md-3 col-sm-8 client">
         <span>Waltraud Gehrig</span>
         <!--<img class="kundenlogo" id="logo-gehrig" src="images/logo-waltraud-gehrig.jpg" />-->
       </a>
+    </div>
+
+    <div class="row justify-content-around">
       <a id="baehr" href="http://www.rae-sigwart-baehr.de/" target="_blank"
-        class="col-xl-2 col-lg-2 col-md-8 col-sm-8 client">
+        class="col-xl-3 col-lg-3 col-md-3 col-sm-8 client">
         <span>Kanzlei
           Sigwart Baehr</span>
         <!--<img class="kundenlogo" id="logo-baehr" src="images/logo-kanzlei-baehr.jpg" />-->
       </a>
       <a id="pflegenetzwerke" href="https://pflegenetzwerke.de/" target="_blank"
-        class="col-xl-2 col-lg-2 col-md-8 col-sm-8 client">
+        class="col-xl-3 col-lg-3 col-md-3 col-sm-8 client">
         <span>Pflegenetzwerke
           Mannheim</span>
+        <!--<img class="kundenlogo" id="logo-baehr" src="images/logo-kanzlei-baehr.jpg" />-->
+      </a>
+      <a id="missprintable" href="https://missprintable.de/" target="_blank"
+        class="col-xl-3 col-lg-3 col-md-3 col-sm-8 client">
+        <span>miss printable</span>
         <!--<img class="kundenlogo" id="logo-baehr" src="images/logo-kanzlei-baehr.jpg" />-->
       </a>
     </div>
 
     <div class="row justify-content-around">
-
       <a id="dubbelspaeth" href="https://www.dubbelspaeth.de/" target="_blank"
-        class="col-xl-2 col-lg-2 col-md-8 col-sm-8 client">
+        class="col-xl-3 col-lg-3 col-md-3 col-sm-8 client">
         <span>Dubbel
           & Spaeth</span>
         <!--<img class="kundenlogo" id="logo-baehr" src="images/logo-kanzlei-baehr.jpg" />-->
       </a>
       <a id="kaffenberger" href="http://karlkaffenberger.de" target="_blank"
-        class="col-xl-2 col-lg-2 col-md-8 col-sm-8 client">
+        class="col-xl-3 col-lg-3 col-md-3 col-sm-8 client">
         <span>Karl
           Kaffenberger</span>
+        <!--<img class="kundenlogo" id="logo-baehr" src="images/logo-kanzlei-baehr.jpg" />-->
+      </a>
+      <a id="nichefragrances" href="https://nichefragrances.de" target="_blank"
+        class="col-xl-3 col-lg-3 col-md-3 col-sm-8 client">
+        <span>Niche Fragrances</span>
+        <!--<img class="kundenlogo" id="logo-baehr" src="images/logo-kanzlei-baehr.jpg" />-->
+      </a>
+    </div>
+
+    <div class="row justify-content-around">
+      <a id="hgcapp" href="https://github.com/BadMomber/hgcapp" target="_blank"
+        class="col-xl-3 col-lg-3 col-md-3 col-sm-8 client">
+        <span>HGC App</span>
+        <!--<img class="kundenlogo" id="logo-baehr" src="images/logo-kanzlei-baehr.jpg" />-->
+      </a>
+      <a id="shopifymultiapp" href="https://github.com/BadMomber/shopify-multiapp/" target="_blank"
+        class="col-xl-3 col-lg-3 col-md-3 col-sm-8 client">
+        <span>Shopify Multi Purpose App</span>
+        <!--<img class="kundenlogo" id="logo-baehr" src="images/logo-kanzlei-baehr.jpg" />-->
+      </a>
+      <a id="fweha1" href="https://github.com/BadMomber/fewha1" target="_blank"
+        class="col-xl-3 col-lg-3 col-md-3 col-sm-8 client">
+        <span>Grocery list API</span>
+        <!--<img class="kundenlogo" id="logo-baehr" src="images/logo-kanzlei-baehr.jpg" />-->
+      </a>
+    </div>
+
+    <div class="row justify-content-around">
+      <a id="nichefragrances" href="https://nichefragrances.de" target="_blank"
+        class="col-xl-3 col-lg-3 col-md-3 col-sm-8 client">
+        <span>Niche Fragrances</span>
+        <!--<img class="kundenlogo" id="logo-baehr" src="images/logo-kanzlei-baehr.jpg" />-->
+      </a>
+      <a id="keywordfiltertool" href="https://github.com/BadMomber/keyword-filter-tool" target="_blank"
+        class="col-xl-3 col-lg-3 col-md-3 col-sm-8 client">
+        <span>Keyword Data Filter Tool</span>
+        <!--<img class="kundenlogo" id="logo-baehr" src="images/logo-kanzlei-baehr.jpg" />-->
+      </a>
+      <a id="shopifymultiapp" href="https://github.com/BadMomber/shopify-multiapp/" target="_blank"
+        class="col-xl-3 col-lg-3 col-md-3 col-sm-8 client">
+        <span>Shopify Multi Purpose App</span>
+        <!--<img class="kundenlogo" id="logo-baehr" src="images/logo-kanzlei-baehr.jpg" />-->
+      </a>
+    </div>
+
+    <div class="row justify-content-around">
+      <a id="badmombercom" href="https://github.com/BadMomber/badmomber.com" target="_blank"
+        class="col-xl-3 col-lg-3 col-md-3 col-sm-8 client">
+        <span>badmomber.com GitHub Repository</span>
+        <!--<img class="kundenlogo" id="logo-baehr" src="images/logo-kanzlei-baehr.jpg" />-->
+      </a>
+      <a id="empty" class="col-xl-3 col-lg-3 col-md-3 col-sm-8 client">
+        <span></span>
+        <!--<img class="kundenlogo" id="logo-baehr" src="images/logo-kanzlei-baehr.jpg" />-->
+      </a>
+      <a id="github" href="https://github.com/BadMomber" target="_blank"
+        class="col-xl-3 col-lg-3 col-md-3 col-sm-8 client">
+        <span>My GitHub Profile</span>
         <!--<img class="kundenlogo" id="logo-baehr" src="images/logo-kanzlei-baehr.jpg" />-->
       </a>
     </div>
@@ -220,7 +290,7 @@
 
   <div class="container" id="skills">
     <div class="row justify-content-center">
-      <div class="col col-xl-8 col-lg-8 col-md-10 col-sm-12">
+      <div class="col-xl-8 col-lg-8 col-md-10 col-sm-12">
         <h2>Tools & Technical Skills</h2>
         <table>
           <tbody>
@@ -271,26 +341,27 @@
 
   <div class="container" id="contact">
     <div class="row justify-content-center">
-      <div class="col col-xl-8 col-lg-8 col-md-8 col-sm-12">
+      <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
         <h2>Get in contact</h2>
         <form method="POST" name="contact-form" action="form-to-email.php">
           <div class="form-group">
             <label for="firstname">First Name</label>
-            <input type="text" class="form-control" id="firstname" placeholder="First Name" name="firstname">
+            <input type="text" class="form-control form-control-lg border-primary border-primary" id="firstname" placeholder="First Name" name="firstname">
           </div>
-            <div class="form-group">
-              <label for="lastname">Last Name</label>
-              <input type="text" class="form-control" id="lastname" placeholder="Last Name" name="lastname">
+          <div class="form-group">
+            <label for="lastname">Last Name</label>
+            <input type="text" class="form-control form-control-lg border-primary" id="lastname" placeholder="Last Name" name="lastname">
           </div>
-              <div class="form-group">
-                <label for="email">E-Mail</label>
-                <input type="email" class="form-control" id="email" placeholder="name@example.com" name="email">
+          <div class="form-group">
+            <label for="email">E-Mail</label>
+            <input type="email" class="form-control form-control-lg border-primary" id="email" placeholder="name@example.com" name="email">
           </div>
-                <div class="form-group">
-                  <label for="formGroupExampleInput4">Message</label>
-                  <textarea type="text" class="form-control" id="message" placeholder="Type your message here..." name="message"></textarea>
-                </div>
-                <button type="submit" value="Submit" class="pure-button fuller-button white">
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea type="text" class="form-control form-control-lg border-primary" id="message" placeholder="Type your message here..."
+              name="message"></textarea>
+          </div>
+          <button type="submit" value="Submit" class="pure-button pure-button-primary fuller-button-primary primary">
             Send message
           </button>
         </form>
@@ -328,5 +399,3 @@
   <!-- End Document
       –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
-
-</html>
