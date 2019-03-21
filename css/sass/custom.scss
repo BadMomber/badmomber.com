@@ -9,7 +9,7 @@
 
 @keyframes move-y {
   0% {
-    color: $white-dark;
+    color: $lightest;
     opacity: 0.1;
   }
 
@@ -18,7 +18,7 @@
   }
 
   100% {
-    color: $primary;
+    color: $medium;
     opacity: 0.1;
   }
 }
@@ -101,10 +101,10 @@ body,
 
 body {
   font-size: 1.6rem;
-  font-weight: 200;
+  font-weight: 400;
 
-  color: #d3cbbd;
-  background-color: $black;
+  color: $dark;
+  background-color: $white;
 }
 
 h1,
@@ -113,7 +113,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: $primary;
+  color: $success;
   text-align: center;
 
   &:first-child {
@@ -146,7 +146,7 @@ h6 {
 }
 
 p {
-  color: $white-dark;
+  color: $dark;
   text-align: left;
   margin-top: 2.5rem;
   line-height: 1.8;
@@ -154,14 +154,16 @@ p {
 }
 
 a {
-  color: $secondary;
+  color: $lightest;
   transition: .4s;
+  background-color: $black;
+  padding: .2rem;
 
   &:hover {
-    color: $secondary;
+    color: $lighter;
     transition: .2s;
     text-decoration: none;
-    border-bottom: 2px solid $secondary;
+    border-bottom: 2px solid $lighter;
   }
 }
 
@@ -188,7 +190,7 @@ td {
 
   &:last-child {
     padding-left: 2rem;
-    border-left: 1px solid $white-dark;
+    border-left: 1px solid $lightest;
   }
 }
 
@@ -205,60 +207,35 @@ td {
     margin-bottom: 3.5rem;
   }
 
-  .client {
-    color: $white-dark;
-    padding: 5rem 2rem;
-    text-align: center;
+  .client,
+  .project {
+    color: $lightest;
     transition: 0.4s;
-    background-color: darken($grey, 15%);
-    border-radius: 2rem;
-
-    &:hover {
-      text-decoration: none;
-      transition: 0.4s;
-      transform: scale(1.2);
-      color: $secondary;
-      border-bottom: none;
-    }
-
-    span {
-      text-align: center;
-      text-decoration: none;
-      line-height: 1;
-    }
+    background-color: $dark-light;
   }
 
-  #github {
-    span:after {
-      content: "";
-      height: 2rem;
-      width: 2rem;
-      display: inline-block;
-      background-image: url("../images/logos/github-logo-cat.png");
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center center;
-      margin-left: 1rem;
-    }
+  .project {
+    background-color: $lightest;
+    color: $dark-light;
   }
+}
 
-  #empty {
-    opacity: 0;
-  }
+#projects {
+  background-color: $dark;
 }
 
 /* Forms & inputs
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .form-control {
   border-radius: 0;
-  border: 0px solid $primary;
-  background-color: lighten($black, 9%);
+  border: 0px solid $medium;
+  background-color: $dark;
   transition: 0.2s;
 
   &:focus {
-    background-color: lighten($black, 15%);
-    border: 1px solid $primary;
-    color: darken($white-dark, 10);
+    background-color: $dark;
+    border: 1px solid $medium;
+    color: $lightest;
     box-shadow: none;
   }
 }
@@ -279,7 +256,7 @@ button {
 
 .fuller-button-primary {
   width: 100%;
-  color: $primary;
+  color: $medium;
   background: none;
   border-radius: 0;
   padding: 1.2em 5em;
@@ -292,16 +269,16 @@ button {
   }
 
   &.primary {
-    box-shadow: inset 0 0 0.8em $primary-transparent-50,
-      0 0 0.8em $primary-transparent-50;
-    border: $primary solid 2px;
+    box-shadow: inset 0 0 0.8em $medium-transparent-50,
+      0 0 0.8em $medium-transparent-50;
+    border: $medium solid 2px;
   }
 
   &.primary:hover {
-    color: $white-dark;
-    background-color: $primary;
-    box-shadow: inset 0 0 0 $primary-transparent-50,
-      0 0 1.2em $primary-transparent-50;
+    color: $lightest;
+    background-color: $medium;
+    box-shadow: inset 0 0 0 $medium-transparent-50,
+      0 0 1.2em $medium-transparent-50;
   }
 }
 
@@ -313,12 +290,13 @@ button {
   text-align: center;
 
   color: #d3cbbd;
-  background: $black;
+  background: $dark;
 }
 
 .container,
 .container-fluid {
   padding: 6rem 2rem;
+  min-height: 100vh;
 }
 
 .banner {
@@ -329,10 +307,10 @@ button {
 
   height: 100vh;
 
-  background-image: url("../images/banner/__space.jpeg");
+  background-image: url("../images/banner/heic1110a.jpg");
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
+  background-attachment: scroll;
+  background-position: center center;
   background-size: cover;
 
   .banner-overlay {
@@ -360,7 +338,7 @@ button {
 
     span {
       font-weight: 300;
-      color: $white-dark;
+      color: $lightest;
       font-size: 1.8rem;
 
       text-transform: none;
@@ -381,7 +359,7 @@ button {
 
     &:hover {
       cursor: pointer;
-      color: $primary;
+      color: $medium;
     }
   }
 }
@@ -394,11 +372,7 @@ button {
   margin-bottom: 2rem;
 }
 
-#about {
-  -webkit-box-shadow: 0px -20px 20px 15px rgba(0, 0, 0, 1);
-  -moz-box-shadow: 0px -20px 20px 15px rgba(0, 0, 0, 1);
-  box-shadow: 0px -20px 20px 15px rgba(0, 0, 0, 1);
-}
+#about {}
 
 /*********************************************/
 /************ Cookieconsent ******************/
@@ -439,22 +413,22 @@ button {
   &.active {
     .top {
       transform: translateY(11px) translateX(0) rotate(45deg);
-      background: $secondary;
+      background: $lighter;
     }
 
     .middle {
       opacity: 0;
-      background: $secondary;
+      background: $lighter;
     }
 
     .bottom {
       transform: translateY(-11px) translateX(0) rotate(-45deg);
-      background: $secondary;
+      background: $lighter;
     }
   }
 
   span {
-    background: $primary;
+    background: $medium;
     border: none;
     height: 5px;
     width: 100%;
@@ -476,11 +450,11 @@ button {
 
 .overlay {
   position: fixed;
-  background: $black;
+  background: $dark;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 0;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.5s, visibility 0.5s, height 0.5s;
@@ -507,6 +481,14 @@ button {
 
       &:nth-of-type(4) {
         animation-delay: 0.5s;
+      }
+
+      &:nth-of-type(5) {
+        animation-delay: 0.4s;
+      }
+
+      &:nth-of-type(6) {
+        animation-delay: 0.35s;
       }
     }
   }
@@ -540,7 +522,7 @@ button {
       a {
         display: block;
         position: relative;
-        color: $primary;
+        color: $medium;
         text-decoration: none;
         overflow: hidden;
 
@@ -564,7 +546,7 @@ button {
           width: 0%;
           transform: translateX(-50%);
           height: 3px;
-          background: $primary;
+          background: $medium;
           transition: 0.35s;
         }
       }
@@ -574,8 +556,10 @@ button {
 
 @media (max-width: 991px) {
 
-  #clients {
-    .client {
+  #clients,
+  #projects {
+    .client,
+    .project {
 
       padding: 4rem .6rem;
 
@@ -626,7 +610,8 @@ button {
     padding: 1.2rem 2rem;
   }
 
-  .client {
+  .client,
+  .project {
     margin-top: 2rem;
 
     &:first-child {
@@ -685,7 +670,8 @@ button {
     padding: 1.2rem 2rem;
   }
 
-  .client {
+  .client,
+  .project {
     margin-top: 2rem;
 
     &:first-child {
@@ -702,5 +688,5 @@ button {
 
 
 .border-primary {
-  border-color: $primary !important;
+  border-color: $medium !important;
 }

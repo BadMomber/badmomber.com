@@ -1,29 +1,56 @@
 /** COLORS **/
+$dark: #30363F;
+$dark-light: #575B5F;
+$medium: #989E96;
+$lighter: #706B6E;
+$lightest: #F1EEEF;
 
-$one: #fcfbfa;
-$two: #c33950;
-$three: #f55d08;
-$four: #80b9e6;
-$five: #207ae1;
-$yellow: #f1b34c;
-$ultraviolet: #221a55;
-$dark-red: #ae392e;
-$red: #e8352e;
-$green: #35c170;
+/*
+$dark: #28252A;
+$dark-light: #816D5E;
+$medium: #7B7C76;
+$lighter: #928E72;
+$lightest: #CEE1E5;
+*/
+
+/*
+
+FDFCFA
+889195
+9B4F58
+AC7F71
+1E2947
+
+*/
+
+/*
+
+F2F6F2
+B9A89F
+FF8600
+DC494D
+1A212D
+
+*/
+
+/*
+
+F2F2F0
+9D9291
+FF8600
+926A42
+19181B
+
+*/
+
+$warning: #dfde61;
+$error: #AC7F71;
+$success: #2A424C;
 
 $white: #fff;
-$white-dark: $one;
 $black: #000;
-$grey: #403d3c;
-// $primary: #80b9e6;
-// $primary: $five;
 
-$primary: $three;
-$secondary: #585a80;
-$warning: #dfde61;
-$error: #ac2538;
-$success: #35a468;
 
-$primary-transparent-50: #bd4b4880;
-$primary-transparent-40: #bd4b4866;
-$primary-transparent-80: #bd4b48cc;
+$medium-transparent-50: #bd4b4880;
+$medium-transparent-40: #bd4b4866;
+$medium-transparent-80: #bd4b48cc;
