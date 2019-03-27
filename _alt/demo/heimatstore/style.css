@@ -1,0 +1,41 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.right {
+  background-color: pink;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+.left {
+  background-color: turquoise;
+}
+
+.left,
+.left-2,
+.left-3,
+.left-4,
+.right {
+  width: 51%;
+  height: 100vh;
+  display: inline-block;
+}
+
+.left-2 {
+  background-color: black;
+}
+.left-3 {
+  background-color: yellowgreen;
+}
+.left-4 {
+  background-color: orange;
+}
+.left,
+.left-2,
+.left-3,
+.left-4 {
+  float: left;
+}
